@@ -1,9 +1,12 @@
 import React from "react"
 import Layout from "../components/Layout"
+import AllRecipes from "../components/AllRecipes"
 export default function Recipes() {
   return (
     <Layout>
-      <h1>Hello From Home</h1>
+      <main className="page">
+        <AllRecipes />
+      </main>
     </Layout>
   )
 }
