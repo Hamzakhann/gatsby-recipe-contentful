@@ -4,8 +4,7 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
-
- require("dotenv").config({
+require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
@@ -42,6 +41,24 @@ module.exports = {
         // host: `preview.contentful.com`,
       },
     },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Montserrat",
+              variants: ["400"],
+            },
+            {
+              family: "Inconsolata",
+              variants: ["400", "500", "600", "700"],
+            },
+          ],
+        },
+      },
+    },
+    `gatsby-plugin-react-helmet`,
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
